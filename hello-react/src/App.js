@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const name = undefined;
-  return name;
+  return <div>{name || '리액트'}</div>;
 }
 
 
