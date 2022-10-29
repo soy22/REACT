@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import ValidationSample from './ValidationSample';
- 
-class App extends Component {
-  render() {
+
+
+class RefSample extends Component {
+  input = React.createRef();
+
+
+
+handleFocus = () => {
+    this.input.current.focus();
+  }
+
+
+
+render() {
     return (
-      <ValidationSample/>
+      <div>
+        <input ref={this.input} />
+      </div>
     );
   }
 }
- 
-export default App;
+
+
+
+export default RefSample;
