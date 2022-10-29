@@ -1,21 +1,12 @@
 import React, { Component } from 'react';
+import ScrollBox from './ScrollBox';
 
 
-class RefSample extends Component {
-  input = React.createRef();
-
-
-
-handleFocus = () => {
-    this.input.current.focus();
-  }
-
-
-
-render() {
+class App extends Component {
+  render() {
     return (
       <div>
-        <input ref={this.input} />
+        <ScrollBox/>
       </div>
     );
   }
@@ -23,4 +14,4 @@ render() {
 
 
 
-export default RefSample;
+export default App;
