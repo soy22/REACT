@@ -31,7 +31,8 @@ handleButtonClick = () => {
 render() {
     return (
       <div>
-        <input
+         <input
+          ref={(ref) => this.input=ref}
           type="password"
           value={this.state.password}
           onChange={this.handleChange}
