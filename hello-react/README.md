@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# react
+- @soy22(정소영)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ch02
+### 2.4.1-1
+- 컴포넌트에 여러 요소가 있다면 반드시 부모 요소 하나로 감싸야 합니다. 요소 여러 개가 부모 요소 하나에 의하여 감싸져 있지 않기 때문에 오류가 발생했습니다.
+### 2.4.1-2
+- 리액트 컴포넌트에서 요소 여러 개를 하나의 요소로 감싸 주어 오류를 해결합니다.
+### 2.4.1-3
+- 여기서 꼭 div 요소를 사용하고 싶지 않을 수도 있습니다. 그런 경우에는 리액트 v16 이상 부터 도입된 Fragment라는 기능을 사용하면 됩니다.
+### 2.4.1-4
+- Fragment는 다음과 같은 형태로도 표현할 수 있습니다.
+### 2.4.2
+- JSX 안에서는 자바스크립트 표현식을 쓸 수 있습니다. 자바스크립트 표현식을 작성하려면 JSX 내부에서 코드를 { }로 감싸면 됩니다. 자바스크립트 값을 JSX 안에서 한번 렌더링해 봅시다.
+### 2.4.3
+- 다른 내용을 렌더링해야 할 때는 JSX 밖에서 if 문을 사용하여 사전에 값을 설정하거나, { } 안에 조건부 연산자를 사용하면 됩니다. 조건부 연산자의 또 다른 이름은 삼항 연산자입니다.
+### 2.4.4-1
+- null을 렌더링하면 아무것도 보여 주지 않습니다.
+### 2.4.4-2
+- 더 짧은 코드로 똑같은 작업을 할 수 있습니다. && 연산자를 사용해서 조건부 렌더링을 할 수 있습니다.
+### 2.4.5-1
+- 리액트 컴포넌트에서는 함수에서 undefined만 반환하여 렌더링하면 오류가 발생합니다.
+### 2.4.5-2
+- name 값이 undefined일 때 보여 주고 싶은 문구가 있다면 다음과 같이 코드를 작성하면 됩니다.
+### 2.4.6-1
+- 리액트에서 DOM 요소에 스타일을 적용할 때는 문자열 형태로 넣는 것이 아니라 객체 형태로 넣어 주어야 합니다.
+### 2.4.6-2
+- 미리 선언하지 않고 바로 style 값을 지정하고 싶다면 다음과 같이 작성하면 됩니다.
+### 2.4.7-1
+- class 대신 className: src 디렉터리 안에 있는 App.css를 열어서 새 CSS 클래스를 작성
+### 2.4.7-2
+- App.js 파일에서 상단에 App.css를 불러온 뒤 div 요소에 className 값을 지정
+### 2.4.8-1
+- input 태그를 닫지 않았을 때 발생하는 오류
+### 2.4.8-2
+- input 태그를 닫아 오류 해결
+### 2.4.8-3
+- 태그 사이에 별도의 내용이 들어가지 않는 경우에는 다음과 같이 작성할 수도 있습니다. 이러한 태그를 self-closing 태그라고 부릅니다. 태그를 선언하면서 동시에 닫을 수 있는 태그죠.
+### 2.4.9
+- 일반 자바스크립트에서 주석을 작성할 때처럼 아무 데나 주석을 작성하면 그 주석은 페이지에 고스란히 나타납니다.
+### 2.5.2-1
+- 들여쓰기가 제대로 되어 있지 않은 코드
+### 2.5.2-2
+- 현재 열려 있는 프로젝트의 루트 디렉터리(src, public 디렉터리들이 위치한 곳)에서 .prettierrc라는 파일 생성
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ch03
+### 3.1-1
+- 2장에서 보았던 App 컴포넌트 - 함수형 컴포넌트
+### 3.1-2
+- 클래스형 컴포넌트
+### 3.2.2
