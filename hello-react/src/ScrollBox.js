@@ -16,7 +16,7 @@ class ScrollBox extends Component {
         background: 'linear-gradient(white,black)'
     }
 
-    retrun (
+    return (
         <div 
         style={style}
         ref={(ref) => {this.box=ref}}>
