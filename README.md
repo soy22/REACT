@@ -220,3 +220,135 @@
 - 커스텀 Hooks 만들기
 ### 8.7-2
 - 이 Hook을 Info 컴포넌트에서 사용
+
+## ch09
+### 9.1-1
+- styling-react 프로젝트 만든 후 App.js 수정
+### 9.1-2
+- styling-react 프로젝트 만든 후 App.css 수정
+### 9.1.2-1
+- CSS Selector를 사용하면 CSS 클래스가 특정 클래스 내부에 있는 경우에만 스타일을 적용할 수 있다.
+### 9.1.2-2
+- 이에 맞춰 컴포넌트의 JSX 부분 수정
+### 9.2-1
+- scr 디렉터리에 SassComponent.scss 파일 작성
+### 9.2-2
+- 이 Sass 스타일시트를 사용하는 SassComponent.js 컴포넌트 파일도 src에 만든다.
+### 9.2-3
+- 이 컴포넌트를 App 컴포넌트에서 보여 준다.
+### 9.2.1-1
+- 여러 파일에서 사용될 수 있는 Sass 변수 및 믹스인은 다른 파일로 따로 분리하여 작성한 뒤 필요한 곳에서 쉽게 불러와 사용할 수 있다. src 디렉터리에 styles라는 디렉터리를 생성하고, 그 안에 utils.scss 파일을 만든다.
+### 9.2.1-2
+- utils.scss 파일에서 선언한 변수와 믹스인을 SassComponent.scss에서 사용한다. 다른 scss 파일을 불러올 때는 @import 구문을 사용한다.
+### 9.2.2-1
+- sassRegex 찾기
+### 9.2.2-2
+- use:에 있는 ‘sass-loader’ 부분을 지우고, 뒷부분에 concat을 통해 커스터마이징된 sass-loader 설정을 넣어 준다.
+### 9.2.2-3
+- webpack.config.js를 열어서 조금 전 수정했던 sass-loader의 옵션에 있는 data 필드를 수정
+### 9.2.3-1
+- utils.scss 파일을 열고 물결 표시를 사용하여 라이브러리를 불러온 다음 두 줄을 코드 상단에 넣어 준다.
+### 9.2.3-2
+- include-media와 open-color를 SassComponent.scss에서 사용한다.
+### 9.3-1
+- CSSModule.module.css라는 파일을 src 디렉터리에 생성
+### 9.3-2
+- CSS Module을 사용하는 리액트 컴포넌트도 작성
+### 9.3-3
+- CSSModule 관련 컴포넌트와 스타일을 모두 작성했다면 App 컴포넌트에서 렌더링
+### 9.3-4
+- CSS Module을 사용한 클래스 이름을 두 개 이상 적용할 때는 다음과 같이 코드를 작성
+### 9.3-5
+- CSS Module을 사용한 클래스 이름을 두 개 이상 적용할 때는 다음과 같이 코드를 작성
+### 9.3.2-1
+- Sass를 사용할 때도 파일 이름 뒤에 .module.scss 확장자를 사용해 주면 CSS Module로 사용할 수 있다.
+### 9.3.2-2
+- 그러고 나서 CSSModule.js 상단에서도 .css 파일 대신 .scss 파일을 불러온다.
+### 9.4-1
+- src 디렉터리에 StyledComponent.js 파일을 생성한 뒤 예제 코드를 작성
+### 9.4-2
+- 이 컴포넌트를 App 컴포넌트에서 보여준다.
+### 9.4.5
+- 브라우저의 가로 크기에 따라 다른 스타일을 적용하기 위해서는 일반 CSS를 사용할 때와 똑같이 media 쿼리(query)를 사용하면 된다.
+
+## ch10
+### 10.1.2
+- 코드를 작성할 때 코드 스타일을 깔끔하게 정리하기 위해 프로젝트의 최상위 디렉터리에 .prettierrc 파일을 생성
+### 10.1.3
+- index.css에서 background 속성 설정
+### 10.1.4
+- App 컴포넌트 초기화
+### 10.2.1-1
+- TodoTemplate 만들기: src 디렉터리에 components 디렉터리를 생성한 뒤 그 안에 TodoTemplate.js 파일을 생성
+### 10.2.1-2
+- 이 컴포넌트를 App.js에서 불러와 렌더링
+### 10.2.1-3
+- jsconfig.json 수정
+### 10.2.1-4
+- 스타일을 작성
+### 10.2.2-1
+- TodoInsert 만들기: components 디렉터리에 TodoInsert.js 파일 생성
+### 10.2.2-2
+- 이 컴포넌트를 App에서 불러와 렌더링
+### 10.2.2-3
+- 이 컴포넌트를 스타일링
+### 10.2.3-1
+- components 디렉터리에 TodoListItem.js 파일 생성 후 작성
+### 10.2.3-2
+- TodoList.js 컴포넌트를 생성 후 작성
+### 10.2.3-3
+- App에서 렌더링
+### 10.2.3-4
+- TodoList 스타일링
+### 10.2.3-5
+- TodoListItem 스타일링
+### 10.3.1-1
+- App에서 useState를 사용하여 todos라는 상태를 정의하고, todos를 TodoList의 props로 전달
+### 10.3.1-2
+- 값을 받아온 후 TodoItem으로 변환하여 렌더링
+### 10.3.1-3
+- TodoListItem 컴포넌트에서 받아 온 todo 값에 따라 제대로 된 UI를 보여 줄 수 있도록 컴포넌트를 수정. 조건부 스타일링을 위해 classnames를 사용.
+### 10.3.2.1
+- TodoInsert value 상태 관리하기
+### 10.3.2.3todos 배열에 새 객체 추가하기
+- 리액트 개발자 도구
+### 10.3.2.4
+- TodoInsert에서 onSubmit 이벤트 설정하기
+### 10.3.3.2
+- todos 배열에서 id로 항목 지우기
+### 10.3.3.3-1
+- TodoListItem에서 삭제 함수 호출하기
+### 10.3.3.3-2
+- 이제 삭제 버튼을 누르면 TodoListItem에서 onRemove 함수에 현재 자신이 가진 id를 넣어서 삭제 함수를 호출하도록 설정
+### 10.3.4.1
+-  onToggle 구현하기
+### 10.3.4.2-1
+- TodoListItem에서 토글 함수 호출하기
+### 10.3.4.2-2
+- TodoListItem도 수정해 보세요. 이전에 onRemove를 사용했던 것과 비슷하게 구현
+
+## ch11
+### 11.1
+- 많은 데이터 렌더링하기
+### 11.4
+- React.memo를 사용하여 컴포넌트 성능 최적화
+### 11.5.1
+- useState의 함수형 업데이트
+### 11.5.2
+- useReducer 사용하기
+### 11.7
+- TodoList 컴포넌트 최적화하기
+### 11.8.2
+- TodoList 수정. List 컴포넌트를 사용할 때는 해당 리스트의 전체 크기와 각 항목의 높이, 각 항목을 렌더링할 때 사용해야 하는 함수, 그리고 배열을 props로 넣어 주어야 한다. 그러면 이 컴포넌트가 전달받은 props를 사용하여 자동으로 최적화해준다.
+### 11.8.3-1
+- TodoList를 저장하고 나면 스타일이 깨져서 나타날 텐데 TodoListItem 컴포넌트를 다음과 같이 수정하면 해결된다.
+### 11.8.3-2
+- TodoListItem의 스타일 파일에서 최하단에 있던 & + &를 사용하여 .TodoListItem 사이사이에 테두리를 설정했던 코드와 &:nth-child(even)을 사용하여 다른 배경 색상을 주는 코드를 지우고, 코드 최상단에 다음 코드를 삽입.
+
+## ch12
+### 12.1.2 
+- immer를 사용하지 않고 불변성 유지
+### 12.1.4 
+- App 컴포넌트에 immer 적용하기
+### 12.1.5 
+- useState의 함수형 업데이트와 immer 함께 쓰기
