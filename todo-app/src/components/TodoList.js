@@ -14,5 +14,4 @@ const TodoList = ({ todos, onRemove }) => {
 };
 
 
-
 export default TodoList;
