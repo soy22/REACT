@@ -1,15 +1,27 @@
-import { Route,Routes } from 'react-router-dom';
-import About from './pages/About';
-import Home from './pages/Home';
- 
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import About from './About';
+import Home from './Home';
+
+
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" component={<Home />} />
-      <Route path="/about" component={<About />} />
-    </Routes>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">홈</Link>
+        </li>
+        <li>
+          <Link to="/about">소개</Link>
+        </li>
+      </ul>
+      <hr />
+      <Route path="/" component={Home} exact={true} />
+      <Route path="/about" component={About} />
+    </div>
   );
 };
+
 
 
 export default App;
