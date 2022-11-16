@@ -6,7 +6,6 @@ const NewsItemBlock = styled.div`
   display: flex;
 
 
-
 .thumbnail {
     margin-right: 1rem;
     img {
