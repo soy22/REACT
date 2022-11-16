@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NewsItem from './NewsItem';
 
+
 const NewsListBlock = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
