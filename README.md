@@ -394,3 +394,75 @@
 - Switch 컴포넌트는 여러 Route를 감싸서 그중 일치하는 단 하나의 라우트만을 렌더링시켜 준다.
 ### 13.6.4
 - Profiles에서 사용하고 있는 컴포넌트에서 Link 대신 NavLink를 사용하게 하고, 현재 선택되어 있는 경우 검정색 배경에 흰색 글씨로 스타일을 보여 주게끔 코드를 수정한다.
+
+## ch14
+### 14.2-1
+- Prettier로 코드 스타일을 자동으로 정리
+### 14.2-2
+- VS Code에서 파일 자동 불러오기 기능을 잘 활용하기 위해 최상위 디렉터리에 jsconfig.json 파일 만들기
+### 14.2-3
+- App.js 수정
+### 14.2-4
+- App.js에 async 적용
+### 14.3
+- 기존에 리액트 프로젝트에서 사용했던 JSONPlaceholder 가짜 API를 전체 뉴스를 불러오는 API로 대체
+### 14.4-1
+- NewsItem 컴포넌트 작성
+### 14.4-2
+- App 컴포넌트에서 NewsList 렌더링
+### 14.5
+- 데이터를 불러와서 뉴스 데이터 배열을 map 함수를 사용하여 컴포넌트 배열로 변환
+### 14.6.1-1
+- components 디렉터리에 Categories.js 컴포넌트 파일을 생성
+### 14.6.1-2
+- App에서 NewsList 컴포넌트 상단에 렌더링
+### 14.6.1-3
+- App에서 category 상태를 useState로 관리, category 값을 업데이트하는 onSelect라는 함수도 만들어 줌, category와 onSelect 함수를 Categories 컴포넌트에게 props로 전달, category 값을 NewsList 컴포넌트에게도 전달
+### 14.6.1-4
+- Categories에서는 props로 전달받은 onSelect를 각 Category 컴포넌트의 onClick으로 설정
+### 14.6.2
+- NewsList 컴포넌트에서 현재 props로 받아 온 category에 따라 카테고리를 지정하여 API를 요청하도록 구현
+### 14.7.2-1
+- src 디렉터리에 pages라는 디렉터리를 생성하고, 그 안에 NewsPage.js 파일 생성
+### 14.7.2-2
+- App의 기존 내용을 모두 지우고 Route를 정의
+### 14.7.3
+- Categories에서 기존의 onSelect 함수를 호출하여 카테고리를 선택하고, 선택된 카테고리에 다른 스타일을 주는 기능을 NavLink로 대체
+### 14.8-1
+- src 디렉터리에 lib 디렉터리를 만들고, 그 안에 usePromise.js 작성
+### 14.8-2
+- NewsList 컴포넌트에서 usePromise를 사용
+
+## ch15
+### 15.2.1
+- src 디렉터리에 contexts 디렉터리를 만든 뒤 그 안에 color.js라는 파일 생성
+### 15.2.2-1
+- ColorBox라는 컴포넌트를 만들어서 ColorContext 안에 들어 있는 색상을 보여 준다.
+### 15.2.2-2
+- App에서 ColorBox 컴포넌트 렌더링
+### 15.2.3-1
+- Provider를 사용하여 Context의 value를 변경
+### 15.2.3-2
+- 오류가 발생하는 App.js 코드
+### 15.3.1-1
+- Context 파일 수정하기
+### 15.3.2-1
+- App 컴포넌트에서 ColorContext.Provider를 ColorProvider로 대체
+### 15.3.2-2
+- ColorBox도 마찬가지로 ColorContext.Consumer를 ColorConsumer로 변경
+### 15.3.2-3
+- 객체 비구조화 할당 문법을 사용하여 value를 조회하는 것을 생략할 수 있음
+### 15.3.3-1
+- Context의 actions에 넣어 준 함수를 호출하는 컴포넌트를 만든다. components 디렉터리에 SelectColors.js라는 파일을 생성
+### 15.3.3-2
+- App 컴포넌트에서 ColorBox 위에 렌더링
+### 15.3.3-3
+- 해당 SelectColors에서 마우스 왼쪽 버튼을 클릭하면 큰 정사각형의 색상을 변경하고, 마우스 오른쪽 버튼을 클릭하면 작은 정사각형의 색상을 변경하도록 구현
+### 15.4.1-1
+- useContext Hook 사용하기
+### 15.4.1-2
+- 클래스 상단에 static contextType 값을 지정
+### 15.4.1-3
+- this.context를 조회했을 때 현재 Context의 value를 가리키게 된다.
+### 15.4.2
+- static contextType 사용하기
