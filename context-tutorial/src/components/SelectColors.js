@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
-import ColorContext from '../contexts/color';
- 
+
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
- 
+
 class SelectColors extends Component {
-  static contextType = ColorContext;
- 
-  handleSetColor = color => {
-    this.context.actions.setColor(color);
-  };
- 
-  handleSetSubcolor = subcolor => {
-    this.context.actions.setSubcolor(subcolor);
-  };
- 
   render() {
     return (
       <div>
@@ -28,11 +17,6 @@ class SelectColors extends Component {
                 height: '24px',
                 cursor: 'pointer'
               }}
-              onClick={() => this.handleSetColor(color)}
-              onContextMenu={e => {
-                e.preventDefault();
-                this.handleSetSubcolor(color);
-              }}
             />
           ))}
         </div>
@@ -41,5 +25,7 @@ class SelectColors extends Component {
     );
   }
 }
- 
+
+
+
 export default SelectColors;
